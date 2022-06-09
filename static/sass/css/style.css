@@ -19,7 +19,7 @@ html {
   /* Full height */
   height: 100%;
   /* Center and scale the image nicely */
-  
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -598,7 +598,7 @@ iframe {
 }
 
 .label-input100 {
-  font-family:'Raleway', sans-serif;;
+  font-family: "Raleway", sans-serif;
   font-size: 17.5px;
   color: white;
   line-height: 1.5;
@@ -14132,4 +14132,34 @@ body {
   font-family: Bebas Neue !important;
 }
 
-#more {display: none;}
+#more {
+  display: none;
+}
+
+.a19 {
+  background-image: url(../img/11.jpg);
+}
+.a20 {
+  background-image: url(../img/12.jpg);
+}
+.a21 {
+  background-image: url(../img/13.jpg);
+}
+.a22 {
+  background-image: url(../img/14.jpg);
+}
+.a23 {
+  background-image: url(../img/15.jpg);
+}
+.a24 {
+  background-image: url(../img/16.jpg);
+}
+.a25 {
+  background-image: url(../img/17.jpg);
+}
+.a26 {
+  background-image: url(../img/18.jpg);
+}
+.a27 {
+  background-image: url(../img/19.jpg);
+}

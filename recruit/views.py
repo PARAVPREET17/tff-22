@@ -18,13 +18,17 @@ def recruit(request):
             email=form.cleaned_data['email']
             user.save()
             send_mail(
-                    'Registration for Recruitment of Thapar Food Festival 2022',
+                    'TFF Registration Confirmation',
                     f"""
-Dear {user.name},
-Greetings from Thapar Food Festival, TIET!
 
-Regards, 
-Team Thapar Food Festival
+Greetings {user.name}, soon-to-be sophomore (hopefully),
+
+This is to inform you that you have taken the first step towards becoming a member of the core team for this 'Food Gala', Thapar Food Fest(TFF), 2k22.
+
+All the best for the upcoming rounds. 
+
+Regards,
+Team TFF'22
                         """,
                     'thaparfoodfestival22@gmail.com',
                     [email],
