@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <title>Thapar Food Festival</title>
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'sass/css/icon-font.css' %}" />
+    <link rel="stylesheet" href="{% static 'sass/css/linea.css' %}" />
+    <link rel="stylesheet" href="{% static 'sass/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'sass/css/TFFCSS.css' %}" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-146468970-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-146468970-1");
+    </script>
+    <link rel="shortcut icon" type="image/png" href="{% static 'sass/img/favicon.png' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    
+  </head>
+  <body onload="myFunction()">
+    <!-- <div id="loading" ><h1 class="wait">plzz wait <span class="ready">cooking the code for you</span></h1></div> -->
+    <!-- <div class="popup10" id="popup10">
+                    <div class="popup10_content">
+                         <div class="popup10_left"><img src="{% static 'sass/img/swiggy.jpg' %}" alt="hi" class="popup10_img">
+                        </div>
+                        <div class="popup10_right">
+                            <a href="#section-about" class="popup10_cross" onclick="vishu()" >&times;</a>
+                        <h1 class="linear-wipe popup10_heading u-centre">thank you swiggy!!</h1>
+                        <p class="paragraph popup10_paragraph">After an amazing Main Day of Thapar Food Festival 2019, we would like to thank Swiggy our Power sponsor for helping us in making successful. For all those who couldn't get enough of what they wanted, get food from all the vendors delivered at your door step with exciting discount only with Swiggy.
+                            <span><p style="font-size: 2.2rem; color: #333333; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-bottom: 1rem">SWIGGY APP LINK</p> <a href="https://play.google.com/store/apps/details?id=in.swiggy.android" style="text-decoration: none; font-size: 2rem; color: chocolate; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">CLICK ME</a></span>
+                        </p>    
+                        <script>
+                        function vishu(){
+                            document.getElementById("popup10").style.visibility="hidden";
+                            document.getElementById("popup10").style.width="0px";
+                        }
+                        </script>
+                        </div>
+                    </div>
+                </div> -->
+    <!-- <div class="loader_wrapper">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div></div>
+          <script>
+          $(window).on("load",function(){
+$(".loader_wrapper").fadeOut("slow");
+          });
+          </script>
+          
+     -->
+    <script type="text/javascript" src="{% static 'tffjs.js' %}"></script>
+    <div
+      id="mySidenav"
+      class="sidenav"
+      style="z-index: 99999999999999999999999999999999999"
+    >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <h3 class="nav_tff">Thapar Food Festival</h3>
+      <div class="navigation_link navigation_item">
+        <a href="#popup" onclick="closeNav()">About</a>
+        <a href="events.html" onclick="closeNav()">Events</a>
+        <a href="#section_pic" onclick="closeNav()">Sponsors</a>
+        <a href="#popup4" onclick="closeNav()">Theme</a>
+        <a href="#team_section" onclick="closeNav()">Gallery</a>
+      </div>
+      <h3 class="follow_us">Follow Us On</h3>
+      <div class="nav_logos">
+        <a
+          href="https://www.facebook.com/thaparfoodfestival/"
+          class="fa fa-facebook"
+        ></a>
+        <a
+          href="https://www.instagram.com/thaparfoodfestival/?hl=en"
+          class="fa fa-instagram"
+        ></a>
+      </div>
+    </div>
+    <span
+      class="nav_logo"
+      style="font-size: 30px; cursor: pointer; color: white; position: fixed"
+      onclick="openNav()"
+      >&#9776;
+    </span>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("nav_logo").style.visibility = "hidden";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+    <header class="header">
+       {% comment %} <div class="header_logo-box">
+        <img src="img/white_logo.png' %}" alt="logo" class="footer_logo">
+      </div> {% endcomment %}
+      <span class="discover_events"
+        ><a href="{% url 'recruit' %}" class="link" id="link"
+          >Be a part of the journey</a
+        ></span
+      > 
+
+      <!-- <div class="heading">
+                <h1 class="main-heading">
+                    <span class="main-heading-upr">THAPAR FOOD FESTIVAL</span>
+                    <span class="main-heading-lwr"></span>
+                    <span ><a href="events.html" class="link" id="link">Discover Our Events</a></span>
+                </h1>
+            </div>-->
+
+      <div class="bg-video_content">
+        <div style="text-align: center; position: absolute">
+          <img
+            style="z-index: 1 !important"
+            class="header_logo"
+            src="{% static './sass/img/logo3.png' %}"
+            alt=""
+          />
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section-about" id="section-about">
+        <div class="u-centre">
+          <h1 class="linear-wipe gallery-header">About us</h1>
+        </div>
+        <div class="row">
+          <div class="col-1-of-2">
+            <h3 class="heading-main-small">who we are</h3>
+            <p class="paragraph">
+              Thapar Food Festival is one of the most magnificient and pompous
+              fests of Thapar Institute of Engineering and Technology. The fest
+              takes place in September and with Coca-Cola as our title sponsor,
+              we hope mesmerise more people by the beauty of food .
+            </p>
+            <h3 class="heading-main-small">the pallete of flavours</h3>
+            <p class="paragraph">
+              The theme, a palette of flavors is an idea revolving around the
+              concept that basic flavors blend to give rise to an assortment of
+              flavors bringing about the diversity in food. The motive is to
+              bring to light, foods that are visually appealing and exquisitely
+              flavoured.
+            </p>
+
+            <a href="#popup" class="btn-link">Learn more &rarr;</a>
+          </div>
+          <div class="col-1-of-2">
+            <div style="text-align: center">
+              <img width="90%" src="{% static './sass/img/logo3.png' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section_pic" id="section_pic">
+        <div class="u-centre">
+          <h1 class="linear-wipe gallery-header">Past Sponsors</h1>
+        </div>
+        <div class="row">
+          <!-- <marquee scrollamount="10" style="padding: 0%"> -->
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/Barbeque_Nation_New_Logo.jpg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/Keventers.png' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/cocaCola.png' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/superDonuts.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="row">
+          <!-- </marquee>
+
+          <marquee scrollamount="10" style="padding: 0%"> -->
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/2-25675_doritos-logo-hd-png-download.png' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/925917844s.jpg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/Belgian.jpg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/burger-king-png' %}-logo-0.png' %}"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="row">
+          <!-- </marquee>
+
+          <marquee scrollamount="10" style="padding: 0%"> -->
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/download (1).png' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/swiggy.png' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/tacobell.jpg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/foodLibrary.jpeg' %}"
+              alt=""
+            />
+          </div>
+        </div>
+        <span id="dots"></span><span id="more">
+        <div class="row">
+          <!-- </marquee>
+
+          <marquee scrollamount="10" style="padding: 0%"> -->
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/giani.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/nestle.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/verka.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/sagarRatna.jpeg' %}"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="row">
+          <!-- </marquee>
+
+          <marquee scrollamount="10" style="padding: 0%"> -->
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/karims.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/pizzaHut.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/snapchat.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/tanishq.jpeg' %}"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="row">
+          <!-- </marquee>
+
+          <marquee scrollamount="10" style="padding: 0%"> -->
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/yoChina.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/organicIndia.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/bisleri.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/idea.jpeg' %}"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="row">
+          <!-- </marquee>
+          <marquee scrollamount="10" style="padding: 0%"> -->
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/cremica.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/ustra.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/barista.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/mankind.jpeg' %}"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="row">
+          <!-- </marquee>
+          <marquee scrollamount="10" style="padding: 0%"> -->
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/track&trail.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/royalEnfield.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-1-of-4">
+            <img
+              class="sponsor-img"
+              src="{% static './sass/img/sponsors/veeba.jpeg' %}"
+              alt=""
+            />
+          </div>
+          <button onclick="myFunction()" id="myBtn">Read more</button>
+        </div>
+
+        <!-- </marquee> -->
+      </section>
+      <section class="section_pic" id="team_section">
+        <div class="team_section-meet">
+          <h1 class="linear-wipe gallery-header">Memories</h1>
+        </div>
+        <div class="row team_section-paragraph" style="width: 80%">
+          <p class="paragraph">
+            Memories are treasures one will always preserve. One may not live a
+            moment again, but can remember and cherish it forever. Memoreies are
+            windows to the past that allow one to jump into that momentous joy
+            and rekive it again. Thapar Food Festival is a joy of many and has
+            always created a plethora of memories, that cherish this unique
+            concoction of food,fun and satisfaction. Music, Art, Dance, Sweet,
+            Sour-our bag is a mixture of all emotions. Below are glimpse of the
+            same:
+          </p>
+        </div>
+        <div class="row" style="padding-left:5rem;">
+          <a href="{% url 'tff16' %}" class="col-1-of-4-memory square-box-2">
+            <div
+              style="
+                position: absolute;
+                color: white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              "
+            >
+              <h1 style="font: normal 600 5.5vw/1.5 Kanit, sans-serif">
+                TFF'16
+              </h1>
+              <h3
+                style="
+                  font: normal 100 1.75vw/1.5 Kanit, sans-serif !important;
+                  margin: -18px;
+                "
+              >
+                The Beggining
+              </h3>
+            </div>
+          </a>
+          <a
+            href="{% url 'tff17' %}"
+            class="col-1-of-4-memory square-box-1"
+            id="square-box-1"
+          >
+            <div
+              style="
+                position: absolute;
+                color: white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              "
+            >
+              <h1 style="font: normal 600 5.5vw/1.5 Kanit, sans-serif">
+                TFF'17
+              </h1>
+              <h3
+                style="
+                  font: normal 100 1.75vw/1.5 Kanit, sans-serif !important;
+                  margin: -18px;
+                "
+              >
+                Dastan-e-Hindustan
+              </h3>
+            </div></a
+          >
+          <a href="{% url 'tff18' %}" class="col-1-of-4-memory square-box-3">
+            <div
+              style="
+                position: absolute;
+                color: white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              "
+            >
+              <h1 style="font: normal 600 5.5vw/1.5 Kanit, sans-serif">
+                TFF'18
+              </h1>
+              <h3
+                style="
+                  font: normal 100 1.75vw/1.5 Kanit, sans-serif !important;
+                  margin: -18px;
+                "
+              >
+                The Wandering Fork
+              </h3>
+            </div></a
+          >
+          <a href="{% url 'tff19' %}" class="col-1-of-4-memory square-box-2">
+            <div
+              style="
+                position: absolute;
+                color: white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              "
+            >
+              <h1 style="font: normal 600 5.5vw/1.5 Kanit, sans-serif">
+                TFF'19
+              </h1>
+              <h3
+                style="
+                  font: normal 100 1.75vw/1.5 Kanit, sans-serif !important;
+                  margin: -18px;
+                "
+              >
+                A Palette of flavours
+              </h3>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <!-- <div class="footer_logo-box">
+    <img src="{% static 'sass/img/white_logo.png' %}" alt="logo" class="footer_logo"></div> -->
+      <div class="row">
+        <div class="col-1-of-4 footer-box1">
+          <h2 class="footer_text">CONTACT US</h2>
+          <p class="footer_para">
+            To know more about this unique amalgamation of food,fun and
+            enjoyment, reach us
+          </p>
+
+          <p class="footer_para">Email &rarr; thaparfoodfestival@thapar.edu</p>
+        </div>
+
+        <div class="col-1-of-4 footer-box2">
+          <h2 class="footer_text">facebook</h2>
+          <i class="fb"
+            ><iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fthaparfoodfestival&tabs=timeline&width=260&height=380&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+              width="260"
+              height="380"
+              style="border: none; overflow: hidden; padding-top: 1rem"
+              scrolling="no"
+              frameborder="0"
+              allowTransparency="true"
+              allow="encrypted-media"
+            ></iframe
+          ></i>
+        </div>
+        <div class="col-1-of-4 footer-box3">
+          <h2 class="footer_text">instagram</h2>
+          <ul class="insta">
+            <!-- SnapWidget -->
+            <iframe
+              src="https://snapwidget.com/embed/877794"
+              class="snapwidget-widget"
+              allowtransparency="true"
+              frameborder="0"
+              scrolling="no"
+              style="
+                border: none;
+                overflow: hidden;
+                width: 260px;
+                height: 380px;
+              "
+            ></iframe>
+            <!-- InstaWidget   -->
+            <!-- <iframe id="  6da550fc6c7aea21c02074923a107a19d31304a5502d0e6236dc681f8508d4f9" style="border: 0px; width: 260px; height: 380px;padding-top: 1rem; margin: 0px;" 
+        scrolling="yes" frameborder="no" src="https://instawidget.net/embed?u=6da550fc6c7aea21c02074923a107a19d31304a5502d0e6236dc681f8508d4f9"></iframe>    
+    </ul> -->
+            <!-- LightWidget WIDGET -->
+            <!-- <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/8382bfbe4f5357c69d0bc55cdfb423b3.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe> -->
+            <!-- LightWidget WIDGET -->
+            <!-- <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+            <iframe
+              src="https://lightwidget.com/widgets/10172ef099015f778c8455159aa1ad5e.html"
+              scrolling="no"
+              allowtransparency="true"
+              class="lightwidget-widget"
+              style="width:100%;border:0;overflow:hidden;"
+            ></iframe> -->
+          </ul>
+        </div>
+        <div class="col-1-of-4 footer-box4">
+          <h2 class="footer_text">location</h2>
+          <i class="map"
+            ><iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.9312390990526!2d76.361363700999!3d30.352904031681735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39102f534a87b5c5%3A0xda1d3ed337e382b3!2sThapar+University%2C+Prem+Nagar%2C+Patiala%2C+Punjab+147004!5e0!3m2!1sen!2sin!4v1563525294236!5m2!1sen!2sin"
+              width="260"
+              height="380"
+              frameborder="0"
+              style="border: 0; padding-top: 1rem"
+              allowfullscreen
+            ></iframe
+          ></i>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="copyright_text">
+          &COPY; Copyright THAPAR FOOD FESTIVAL 2022<span class="copyright_span"
+            >Coded with<span style="color: red; font-size: 2rem">
+              &hearts;</span
+            >
+            by
+            <a
+              href=""
+              class="copyright_link sushant"
+            >
+              Technical Team TFF
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // $(document).ready(function(){
+      // 	$('div#loading').removeAttr('id');
+      // });
+      var preloader = document.getElementById("loading");
+      // window.addEventListener('load', function(){
+      // 	preloader.style.display = 'none';
+      // 	})
+
+      function myFunction() {
+        preloader.style.display = "none";
+      }
+    </script>
+    <div class="popup" id="popup">
+      <div class="popup_content">
+        <div class="popup_left">
+          <img src="{% static 'sass/img/about2.jpeg' %}" alt="hi" class="popup_img" />
+          <img src="{% static 'sass/img/about3.jpeg' %}" alt="hi" class="popup_img" />
+        </div>
+
+        <div class="popup_right">
+          <a href="#section-about" class="popup_cross">&times;</a>
+          <h1
+            style="font-size: 7rem"
+            class="linear-wipe popup_heading u-centre"
+          >
+            about us
+          </h1>
+          <p class="paragraph popup_paragraph">
+            Thapar Food Festival is the most magnificent and awe-inspiring
+            festivity ever happened, one-of-a-kind. Keeping the sky as the
+            limit, we always venture hard to content the ever-growing foodie in
+            you. TFF is not just a festival, but also a mission to let food
+            break barriers and make everyone happy on a common stage. We are a
+            journey, ever-growing indulging masses in merry-making. Come,
+            experience edible infinity.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="popup1" id="popup1">
+      <div class="popup1_content">
+        <div class="popup1_left">
+          <img src="{% static 'sass/img/about2.jpeg' %}" alt="hi" class="popup1_img" />
+          <img src="{% static 'sass/img/about3.jpeg' %}" alt="hi" class="popup1_img" />
+        </div>
+        <div class="popup1_right">
+          <a href="#section-about" class="popup1_cross">&times;</a>
+          <h1 class="linear-wipe popup1_heading">achievements of 2016</h1>
+          <p class="paragraph popup1_paragraph">
+            This was the birth year of a tasty genre. The Thapar Food Festival
+            was the first and one of a kind Food Festival all over India on a
+            university level. It has always tried to bring up smiles on the
+            faces of people through food, after all, the way to a person’s heart
+            is through the stomach.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="popup2" id="popup2">
+      <div class="popup2_content">
+        <div class="popup2_left">
+          <img src="{% static 'sass/img/about2.jpeg' %}" alt="hi" class="popup2_img" />
+          <img src="{% static 'sass/img/about3.jpeg' %}" alt="hi" class="popup2_img" />
+        </div>
+
+        <div class="popup2_right">
+          <a href="#section-about" class="popup2_cross">&times;</a>
+          <h1 class="linear-wipe popup2_heading">achievements of 2017</h1>
+          <p class="paragraph popup2_paragraph">
+            After a successful first year, the Thapar Food Festival was bigger
+            than ever. We have had leading brands opening up their delectable
+            stalls in our festival like Keventers and Tacobell. After this there
+            was no looking back and the Thapar Food Festival started burgeoning.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="popup3" id="popup3">
+      <div class="popup3_content">
+        <div class="popup3_left">
+          <img src="{% static 'sass/img/about2.jpeg' %}" alt="hi" class="popup3_img" />
+          <img src="{% static 'sass/img/about3.jpeg' %}" alt="hi" class="popup3_img" />
+        </div>
+
+        <div class="popup3_right">
+          <a href="#section-about" class="popup3_cross">&times;</a>
+          <h1 class="linear-wipe popup3_heading">achievements of 2018</h1>
+          <p class="paragraph popup3_paragraph">
+            Who doesn’t love mangoes? Ever imagined an event where every dish is
+            made of mango? Well we made it possible! Mango bonanza was a
+            humongous hit which literally had every dish as mango as a primary
+            ingredient. Well this wasn’t it, we broke the Guinness World Record
+            for most number of Coca-Cola cans opened at the same time which was
+            a total of 1500 cans opened!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup4" id="popup4">
+      <div class="popup4_content">
+        <div class="popup4_left">
+          <img src="{% static 'sass/img/theme.jpg' %}" alt="hi" class="popup4_img" />
+          <!-- <img src="img/about3.jpeg' %}" alt="hi" class="popup4_img">-->
+        </div>
+        <div class="popup4_right">
+          <a href="#section-about" class="popup4_cross">&times;</a>
+          <h1
+            style="font-size: 7rem"
+            class="linear-wipe popup4_heading u-centre"
+          >
+            THEME
+          </h1>
+          <p class="paragraph popup4_paragraph">
+            This world is full of colours, Colours that excite us and makes the
+            earth a happierplace to live. These colours when fuse together,
+            impart their individual expertise and present verstality. This time,
+            we, at TFF has decided to let all lips murmur "Oh!My God" by letting
+            spices and flavours fuse wild in the right way.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="popup6" id="popup6">
+      <div class="popup6_content">
+        <a href="#section_pic" class="popup6_cross">&times;</a>
+        <div class="center">
+          <h1 class="linear-wipe popup6_heading">associate sponsors</h1>
+        </div>
+        <div class="row">
+          <div class="col-1-of-3 popup6_photo">
+            <img src="{% static 'sass/img/associate1.jpg' %}" alt="" class="popup6_photos" />
+          </div>
+          <div class="col-1-of-3 popup6_photo">
+            <img src="{% static 'sass/img/associate6.jpg' %}" alt="" class="popup6_photos" />
+          </div>
+          <div class="col-1-of-3 popup6_photo">
+            <img src="{% static 'sass/img/associate3.jpg' %}" alt="" class="popup6_photos" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1-of-3 popup6_photo">
+            <img src="{% static 'sass/img/associate4.jpeg' %}" alt="" class="popup6_photos" />
+          </div>
+          <div class="col-1-of-3 popup6_photo">
+            <img src="{% static 'sass/img/associate5.jpeg' %}" alt="" class="popup6_photos" />
+          </div>
+          <div class="col-1-of-3 popup6_photo">
+            <img src="{% static 'sass/img/associate7.jpg' %}" alt="" class="popup6_photos" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup7" id="popup7">
+      <div class="popup7_content">
+        <div class="popup7_left">
+          <img src="{% static 'sass/img/qw.jpg' %}" alt="hi" class="popup7_img" />
+          <!-- <img src="img/about3.jpeg' %}" alt="hi" class="popup7_img">-->
+        </div>
+        <div class="popup7_right">
+          <a href="#section_pic" class="popup7_cross">&times;</a>
+          <h1 class="linear-wipe popup7_heading u-centre">COCA-COLA</h1>
+          <p class="paragraph popup7_paragraph">
+            The most famous brand ruling over the soft drinks industry since
+            more than 127 years with 500 different products. For the second
+            consecutive time, Thapar Food Festival holds pride to have the
+            Coca-Cola Company as our Title Sponsor.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="popup8" id="popup8">
+      <div class="popup8_content">
+        <div class="popup8_left">
+          <!--<img src="img/about2.jpeg' %}" alt="hi" class="popup8_img"> -->
+          <img src="{% static 'sass/img/swiggy.jpg' %}" alt="hi" class="popup8_img" />
+        </div>
+
+        <div class="popup8_right">
+          <a href="#section_pic" class="popup8_cross">&times;</a>
+          <h1 class="linear-wipe popup8_heading u-centre">SWIGGY</h1>
+          <p class="paragraph popup8_paragraph">
+            Food is best enjoyed,when it is served hot and fresh, right at your
+            doorstep amidst your busy schedule. This might be a dream sometime
+            ago but Swiggy has made it a reality. This year,Thapar Food Festival
+            is ready to get extra happy with Swiggy joining us as our Power
+            Sponsor.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="popup9" id="popup9">
+      <div class="popup9_content">
+        <div class="popup9_left">
+          <img src="{% static 'sass/img/boston.jpg' %}" alt="hi" class="popup9_img" />
+          <!-- <img src="img/about3.jpeg' %}" alt="hi" class="popup9_img"> -->
+        </div>
+        <div class="popup9_right">
+          <a href="#section_pic" class="popup9_cross">&times;</a>
+          <h1 class="linear-wipe popup9_heading u-centre">boston bites</h1>
+          <p class="paragraph popup9_paragraph">
+            The best way to make one happy is to serve him with a box of
+            mouth-watering pizza and a bottle of Coke. Pizza is the best way one
+            can describe happiness. This summer,Thapar Food Festival is ready to
+            let everyone express happiness with Boston Bites as our co-sponsor.
+          </p>
+        </div>
+      </div>
+    </div> 
+    <!-- <div class="popup10" id="popup10">
+
+                            <div class="popup10_content">
+                                    
+                                       
+                                 <div class="popup10_left"><img src="{% static 'sass/img/swiggy.jpg' %}" alt="hi" class="popup10_img">
+                                </div>
+                                <div class="popup10_right">
+                                    <a href="#section-about" class="popup10_cross" onclick="vishu()" >&times;</a>
+                                <h1 class="linear-wipe popup10_heading u-centre">thank you swiggy!!</h1>
+                                <p class="paragraph popup10_paragraph">After an amazing Main Day of Thapar Food Festival 2019, we would like to thank Swiggy our Power sponsor for helping us in making successful. For all those who couldn't get enough of what they wanted, get food from all the vendors delivered at your door step with exciting discount only with Swiggy.
+                                    <span><p style="font-size: 2.2rem; color: #333333; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-bottom: 1rem">SWIGGY APP LINK</p> <a href="https://play.google.com/store/apps/details?id=in.swiggy.android" style="text-decoration: none; font-size: 2rem; color: chocolate; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">CLICK ME</a></span>
+                                </p>    
+                                <script>
+                                function vishu(){
+
+                                    document.getElementById("popup10").style.visibility="hidden";
+                                    
+                                    document.getElementById("popup10").style.width="0px";
+                                }
+                                </script>
+                                </div>
+                            </div>
+                        </div> -->
+    <script>
+      function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+      
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Read more";
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Read less";
+          moreText.style.display = "inline";
+        }
+      }
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "907170169616450");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=907170169616450&ev=PageView&noscript=1"
+    /></noscript>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+  <!-- JavaScript Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"
+  ></script>
+</html>

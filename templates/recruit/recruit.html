@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<title>Recruitment</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="TFF'20 Welcomes you to its recruitment form! Be a part of the journey">
+	
+    <link rel="shortcut icon" type="image/png" href="'{% static 'sass/img/favicon.png' %}" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js' %}"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@500&family=Raleway&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway&display=swap" rel="stylesheet">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'RecruitForm/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'RecruitForm/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'RecruitForm/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'RecruitForm/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'RecruitForm/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'RecruitForm/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'RecruitForm/vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'RecruitForm/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'RecruitForm/vendor/daterangepicker/daterangepicker.css' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'sass/css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'sass/css/ardour.css' %}">
+	
+	<link rel="stylesheet" href="{% static 'sass/css/radio.css' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css' %}">
+<!--===============================================================================================-->
+<script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-146468970-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-146468970-1");
+    </script>
+    
+</head>
+<body style="padding:unset" >
+	<!-- <div id="loading" ><h1 class="wait">plzz wait <span class="ready">cooking the code for you</span></h1></div>
+	<div class="loader_wrapper">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div></div>
+          <script>
+          $(window).on("load",function(){
+$(".loader_wrapper").fadeOut("slow");
+          }); -->
+         
+<div class="bg-contact100">
+	
+	<div  class="bg-video" id="bg-video1">
+		<video class="bg-video_content videos" autoplay loop muted > 
+		  <source
+			src="{% static 'sass/img/forms1.mp4"
+			type="video/mp4"
+		  />
+		</video>
+	  </div>	
+	  
+	  
+	<div  class="bg-video" id="bg-video2">
+		<video class="bg-video_content videos" autoplay loop muted>
+		  <source
+			src="{% static 'sass/img/2.mp4"
+			type="video/mp4"
+		  />
+		</video>
+	  </div>	
+	  
+	<div  class="bg-video" id="bg-video3">
+		<video class="bg-video_content videos" autoplay loop muted>
+		  <source
+			src="{% static 'sass/img/1.mp4"
+			type="video/mp4"
+		  />
+		</video>
+	  </div>	
+		<div class="container-contact100">
+			<div class="wrap-contact100">
+		<!-- <div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div> -->
+				<div class="image">
+				</div>
+				
+				<div class="wrap-contact100" id="fullform">
+					<div class="contact100-form-title">
+					
+					<!-- <div class="contact100-form-title" style="background-image: url({% static 'RecruitForm/images/bg-01.jpg);"> -->
+						<span class="contact100-form-title-1">
+							<img id="logo_top" style="visibility:hidden;display:none" src="{% static 'sass/img/logo3.png">
+						</span>
+						<span class="contact100-form-title-2">
+							RECRUITMENT FORM
+						</span>
+					</div>
+					
+					<form  class="contact100-form validate-form"  action="" id="recruit_form" method="POST">
+						{% csrf_token %}
+						<div id="section_one">
+							<div class="wrap-input100 validate-input" data-validate="Required">
+								<span class="label-input100">Name on your Aadhaar card
+								</span>
+								<input class="input100" type="text" name="name" id="name" placeholder="Enter full name">
+								<span class="focus-input100"></span>
+							</div>
+
+
+							<!-- <% if(errors['data.email']){%>
+								<%=errors['data.email'].msg%>
+							<%}%> -->
+							<div class="wrap-input100 validate-input" data-validate="Required">
+								<span class="label-input100">Enter roll number</span>
+								<input class="input100" type="text" name="roll_no" id="roll" placeholder="Kisi zamane me jispe Proxy lgwaate the!">
+								<span class="focus-input100"></span>
+								
+							</div>
+							<div class="wrap-input100 validate-input" data-validate="Required">
+								<span class="label-input100">Kaun si branch mein ho?</span>
+								<input class="input100" type="text" name="branch" id ="branch" placeholder="Enter branch">
+								<span class="focus-input100"></span>
+								
+							</div>
+							<div class="wrap-input100 validate-input" data-validate="Required">
+								<span class="label-input100">Email ID</span>
+								<input class="input100" type="text" name="email" id ="email" placeholder="Enter your Thapar ID">
+								<span class="focus-input100"></span>
+							</div>
+							<!-- <div class="wrap-input100 validate-input" data-validate="CG is required">
+								<span class="label-input100">अभियांत्रिकी में क्या grade चल रहा है?</span>
+								<input class="input100" type="text" name="data[CG]" id="CG" placeholder="Enter CG">
+								<span class="focus-input100"></span>
+								
+							</div> -->
+							<div class="wrap-input100 validate-input" data-validate="Required">
+								<span class="label-input100">Aap ko updates kis number par chahiye? (Whatsapp Only!)</span>
+								<input class="input100" type="text" name="phone" id="phone" placeholder="Enter phone number">
+								<span class="focus-input100"></span>
+							</div>
+							<div class="errors">
+								<!-- <% if(errors['data.phone']){%>
+									<%=errors['data.phone'].msg%>
+								<%}%> -->
+							</div>
+							<div class="wrap-input100 validate-input" data-validate="Required">
+								<span class="label-input100">Aapka shehar aur uski khasiyat?</span>
+								<input class="input100" type="text" name="homecity" id="place" placeholder="Enter hometown and its famous food">
+								<span class="focus-input100"></span>
+							</div>
+							<div class="container-contact100-form-btn">
+								<button type="button" class="contact100-form-btn nexty" id="section_one_next" onclick="forward_one()"> 
+									<span>
+										Next
+										<!-- <i class="fa fa-long-arrow-right m-l-7"  aria-hidden="true"></i> -->
+									</span>
+								</button>
+							</div>
+						</div>
+						<div id="section_two">
+							<div class="wrap-input100 validate-input" data-validate="Required">
+								<span class="label-input100">What qualities do you have that makes you stand out of the crowd?</span>
+								<input class="input100" type="text" name="qualities" id="timeDevote" placeholder="Enter qualities">
+								<span class="focus-input100"></span>
+							</div>
+							<div class="wrap-input100 validate-input" data-validate="Required">
+								<span class="label-input100">Kaun kaun si societies mein kaam Kiya hai? (Previous Experience)</span>
+								<input class="input100" type="text" name="previous_experience" id="otherSocities"placeholder="Enter previous experience">
+								<span class="focus-input100"></span>
+								
+							</div>
+							<div class="wrap-input100 validate-input" data-validate="Required">
+								<span class="label-input100">Which dish describes you the best and why? </span>
+								<input class="input100" type="text" name="dish_describe" id="dish_describe" placeholder="Enter dish">
+								<span class="focus-input100"></span>
+								
+							</div>
+							<div class="wrap-input100 validate-input" data-validate = "Required">
+								<span class="label-input100">What prompts you to earn a core position at TFF?</span>
+								<input class="input100" type="text" name="qualities_for_core" id="qualities_for_core" placeholder="Enter qualities which make you eligible for a core position">
+								<span class="focus-input100"></span>
+              </div>
+							<div class="wrap-input100 validate-input" data-validate = "Required">
+								<span class="label-input100">Which exceptional event would you like to conduct in the upcoming fest?</span>
+								<input class="input100" type="text" name="upcoming_event_desired" id="qualities_for_core" placeholder="Enter event">
+								<span class="focus-input100"></span>
+              </div>
+              
+			  <div style="display: flex;flex-direction:flex-start">
+							
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn nexty" type="submit">
+						<span>
+							Submit
+							<!-- <i class="fa fa-long-arrow-right m-l-7"  aria-hidden="true"></i> -->
+						</span>
+					</button>
+  </div>
+  <div class="container-contact100-form-btn">
+					<button type="button" class="contact100-form-btn backy" id="section_three_prev" onclick="previous_two()"> 
+						<span>
+							Back
+							<!-- <i class="fa fa-long-arrow-left m-l-7"  aria-hidden="true"></i> -->
+						</span>
+					</button>
+				</div>
+				</div>
+				</div>
+              {% comment %} <div style="display: flex;"> {% endcomment %}
+              
+						
+							{% comment %} <div class="container-contact100-form-btn ">
+								<button type="button" class="contact100-form-btn nexty" id="section_two_next" onclick="forward_two()"> 
+									<span>
+										
+										<!-- <i class="fa fa-long-arrow-right m-l-7"  aria-hidden="true"></i> -->
+									</span>
+								</button>
+              </div> {% endcomment %}
+              {% comment %} <div class="container-contact100-form-btn ">
+								<button type="button" class="contact100-form-btn backy" id="section_two_prev" onclick="previous_two()"> 
+									<span>
+										Back
+										<!-- <i class="fa fa-long-arrow-right m-l-7"  aria-hidden="true"></i> -->
+									</span>
+								</button>
+							</div>
+            </div>
+							</div>
+						
+						<div id="section_three">
+							
+
+							<p id="rateQ" style="border-bottom: 1px solid #b2b2b2;">Rate yourself from 1-5
+							</p>
+							
+
+
+							
+							<div class="wrap-input100 validate-input" style="border-bottom: none;" >
+								<span class="label-input100">Team Management<span style="margin-left:10px ;"></span> [ 1 <--> 5 ]</span>
+								<br>
+								
+								<!-- <input class="input100" type="text" name="data[email]" placeholder="Enter email addess"> -->
+								<!-- <label for="rating1" class="radio100 label-input100" >1</label>
+								<input id="rating1"  type="radio" name="entry.1694120072" value="1" />
+								<label for="rating2" class="radio100 label-input100" >2</label>
+								<input id="rating2"  type="radio" name="entry.1694120072" value="2" />
+								<label for="rating3" class="radio100 label-input100" >3</label>
+								<input id="rating3"  type="radio" name="entry.1694120072" value="3" />
+								<label for="rating4" class="radio100 label-input100" >4</label>
+								<input id="rating4"  type="radio" name="entry.1694120072" value="4" />
+								<label for="rating5" class="radio100 label-input100" >5</label>
+								<input id="rating5"  type="radio" name="entry.1694120072" value="5" />
+								 -->
+								<!-- <span class="focus-input100"></span> -->
+								<ul>
+									<li>
+									  <input type="radio" id="ratingQ11" name="entry.1694120072" value="1">
+									  
+										<label for="ratingQ11" ></label>
+									  <div class="check"></div>
+									</li>
+									
+									<li>
+									  <input type="radio" id="ratingQ12" name="entry.1694120072" value="2">
+									  <label for="ratingQ12"></label>
+									  
+									  <div class="check"><div class="inside"></div></div>
+									</li>
+									
+									<li>
+									  <input type="radio" id="ratingQ13" name="entry.1694120072" value="3">
+									  <label for="ratingQ13"></label>
+									  
+									  <div class="check"><div class="inside"></div></div>
+									</li>
+									
+									<li>
+										<input type="radio" id="ratingQ14" name="entry.1694120072" value="4">
+										<label for="ratingQ14"></label>
+										
+										<div class="check"><div class="inside"></div></div>
+									  </li>
+									  
+									<li>
+										<input type="radio" id="ratingQ15" name="entry.1694120072" value="5">
+										<label for="ratingQ15"></label>
+										
+										<div class="check"><div class="inside"></div></div>
+									  </li>
+								</ul>
+								<span class="focus-input100"></span>
+							
+							</div>
+							<div class="wrap-input100 validate-input" style="border-bottom: none;">
+								<span class="label-input100">Stay positive under pressure</span>
+								<br>
+								<!-- <input class="input100" type="text" name="data[email]" placeholder="Enter email addess"> -->
+								<!-- <label for="rating1" class="radio100 label-input100" >1</label>
+								<input id="rating1"  type="radio" name="entry.200074965" id="rateQ2" value="1" />
+								<label for="rating2" class="radio100 label-input100" >2</label>
+								<input id="rating2"  type="radio" name="entry.200074965" id="rateQ2" value="2" />
+								<label for="rating3" class="radio100 label-input100" >3</label>
+								<input id="rating3"  type="radio" name="entry.200074965" id="rateQ2" value="3" />
+								<label for="rating4" class="radio100 label-input100" >4</label>
+								<input id="rating4"  type="radio" name="entry.200074965" id="rateQ2" value="4" />
+								<label for="rating5" class="radio100 label-input100" >5</label>
+								<input id="rating5"  type="radio" name="entry.200074965" id="rateQ2" value="5" />
+								 -->
+								 <ul>
+									<li>
+									  <input type="radio" id="ratingQ21" name="entry.200074965" value="1">
+									  <label for="ratingQ21"></label>
+									  <div class="check"></div>
+									</li>
+									
+									<li>
+									  <input type="radio" id="ratingQ22" name="entry.200074965" value="2">
+									  <label for="ratingQ22"></label>
+									  
+									  <div class="check"><div class="inside"></div></div>
+									</li>
+									
+									<li>
+									  <input type="radio" id="ratingQ23" name="entry.200074965" value="3">
+									  <label for="ratingQ23"></label>
+									  
+									  <div class="check"><div class="inside"></div></div>
+									</li>
+									
+									<li>
+										<input type="radio" id="ratingQ24" name="entry.200074965" value="4">
+										<label for="ratingQ24"></label>
+										
+										<div class="check"><div class="inside"></div></div>
+									  </li>
+									  
+									<li>
+										<input type="radio" id="ratingQ25" name="entry.200074965" value="5">
+										<label for="ratingQ25"></label>
+										
+										<div class="check"><div class="inside"></div></div>
+									  </li>
+								</ul>
+								<!-- <span class="focus-input100"></span> -->
+							</div>
+							<div class="wrap-input100 validate-input" style="border-bottom: none;">
+								<span class="label-input100">Proactively reach out & help others</span>
+								<br>
+								<!-- <input class="input100" type="text" name="data[email]" placeholder="Enter email addess"> -->
+								<!-- <label for="rating1" class="radio100 label-input100" >1</label>
+								<input id="rating1"  type="radio" name="entry.1343528650" id="rateQ3" value="1" />
+								<label for="rating2" class="radio100 label-input100" >2</label>
+								<input id="rating2"  type="radio" name="entry.1343528650" id="rateQ3" value="2" />
+								<label for="rating3" class="radio100 label-input100" >3</label>
+								<input id="rating3"  type="radio" name="entry.1343528650" id="rateQ3" value="3" />
+								<label for="rating4" class="radio100 label-input100" >4</label>
+								<input id="rating4"  type="radio" name="entry.1343528650" id="rateQ3" value="4" />
+								<label for="rating5" class="radio100 label-input100" >5</label>
+								<input id="rating5"  type="radio" name="entry.1343528650" id="rateQ3" value="5" />
+								 -->
+								 <ul>
+									<li>
+									  <input type="radio" id="ratingQ31" name="entry.1343528650" value="1">
+									  <label for="ratingQ31"></label>
+									  <div class="check"></div>
+									</li>
+									
+									<li>
+									  <input type="radio" id="ratingQ32" name="entry.1343528650" value="2">
+									  <label for="ratingQ32"></label>
+									  
+									  <div class="check"><div class="inside"></div></div>
+									</li>
+									
+									<li>
+									  <input type="radio" id="ratingQ33" name="entry.1343528650" value="3">
+									  <label for="ratingQ33"></label>
+									  
+									  <div class="check"><div class="inside"></div></div>
+									</li>
+									
+									<li>
+										<input type="radio" id="ratingQ34" name="entry.1343528650" value="4">
+										<label for="ratingQ34"></label>
+										
+										<div class="check"><div class="inside"></div></div>
+									  </li>
+									  
+									<li>
+										<input type="radio" id="ratingQ35" name="entry.1343528650" value="5">
+										<label for="ratingQ35"></label>
+										
+										<div class="check"><div class="inside"></div></div>
+									  </li>
+								</ul>
+								<span class="focus-input100"></span>
+							</div>
+							<div class="wrap-input100 validate-input" style="border-bottom: none;">
+								<span class="label-input100">Solution Oriented</span>
+								<br>
+								<!-- <input class="input100" type="text" name="data[email]" placeholder="Enter email addess"> -->
+								<!-- <label for="rating1" class="radio100 label-input100" >1</label>
+								<input id="rating1"  type="radio" name="entry.280603844" id="rateQ4" value="1" />
+								<label for="rating2" class="radio100 label-input100" >2</label>
+								<input id="rating2"  type="radio" name="entry.280603844" id="rateQ4" value="2" />
+								<label for="rating3" class="radio100 label-input100" >3</label>
+								<input id="rating3"  type="radio" name="entry.280603844" id="rateQ4" value="3" />
+								<label for="rating4" class="radio100 label-input100" >4</label>
+								<input id="rating4"  type="radio" name="entry.280603844" id="rateQ4" value="4" />
+								<label for="rating5" class="radio100 label-input100" >5</label>
+								<input id="rating5"  type="radio" name="entry.280603844" id="rateQ4" value="5" />
+								 -->
+								 <ul>
+									<li>
+									  <input type="radio" id="ratingQ41" name="entry.280603844" value="1">
+									  <label for="ratingQ41"></label>
+									  <div class="check"></div>
+									</li>
+									
+									<li>
+									  <input type="radio" id="ratingQ42" name="entry.280603844" value="2">
+									  <label for="ratingQ42"></label>
+									  
+									  <div class="check"><div class="inside"></div></div>
+									</li>
+									
+									<li>
+									  <input type="radio" id="ratingQ43" name="entry.280603844" value="3">
+									  <label for="ratingQ43"></label>
+									  
+									  <div class="check"><div class="inside"></div></div>
+									</li>
+									
+									<li>
+										<input type="radio" id="ratingQ44" name="entry.280603844" value="4">
+										<label for="ratingQ44"></label>
+										
+										<div class="check"><div class="inside"></div></div>
+									  </li>
+									  
+									<li>
+										<input type="radio" id="ratingQ45" name="entry.280603844" value="5">
+										<label for="ratingQ45"></label>
+										
+										<div class="check"><div class="inside"></div></div>
+									</li>
+								</ul>
+								<span class="focus-input100"></span>
+							</div>
+							<div class="wrap-input100 validate-input" style="border-bottom: none;">
+								<span class="label-input100">Punctuality/Sincerity</span>
+								<br>
+								<!-- <input class="input100" type="text" name="data[email]" placeholder="Enter email addess"> -->
+								<!-- <label for="rating1" class="radio100 label-input100" >1</label>
+								<input id="rating1"  type="radio" name="entry.1656877776" id="rateQ5" value="1" />
+								<label for="rating2" class="radio100 label-input100" >2</label>
+								<input id="rating2"  type="radio" name="entry.1656877776" id="rateQ5" value="2" />
+								<label for="rating3" class="radio100 label-input100" >3</label>
+								<input id="rating3"  type="radio" name="entry.1656877776" id="rateQ5" value="3" />
+								<label for="rating4" class="radio100 label-input100" >4</label>
+								<input id="rating4"  type="radio" name="entry.1656877776" id="rateQ5" value="4" />
+								<label for="rating5" class="radio100 label-input100" >5</label>
+								<input id="rating5"  type="radio" name="entry.1656877776" id="rateQ5" value="5" />
+								 -->
+								 <ul>
+									<li>
+									  <input type="radio" id="ratingQ51" name="entry.1656877776" value="1">
+									  <label for="ratingQ51"></label>
+									  <div class="check"></div>
+									</li>
+									
+									<li>
+									  <input type="radio" id="ratingQ52" name="entry.1656877776" value="2">
+									  <label for="ratingQ52"></label>
+									  
+									  <div class="check"><div class="inside"></div></div>
+									</li>
+									
+									<li>
+									  <input type="radio" id="ratingQ53" name="entry.1656877776" value="3">
+									  <label for="ratingQ53"></label>
+									  
+									  <div class="check"><div class="inside"></div></div>
+									</li>
+									
+									<li>
+										<input type="radio" id="ratingQ54" name="entry.1656877776" value="4">
+										<label for="ratingQ54"></label>
+										
+										<div class="check"><div class="inside"></div></div>
+									  </li>
+									  
+									<li>
+										<input type="radio" id="ratingQ55" name="entry.1656877776" value="5">
+										<label for="ratingQ55"></label>
+										
+										<div class="check"><div class="inside"></div></div>
+									  </li>
+								</ul>
+								<span class="focus-input100"></span>
+							</div>
+							<div class="wrap-input100 validate-input" data-validate="Required">
+								<span class="label-input100">Describe yourself in 3 words.</span>
+								<input class="input100" type="text" name="entry.1814998359" id="des" placeholder="In 3 words only">
+								<span class="focus-input100"></span>
+								
+							</div>
+
+							<!-- <div class="wrap-input100 validate-input" data-validate="Required">
+								<span class="label-input100">Witty!</span>
+								<input class="input100" type="text" name="entry.1413529514" id="Witty" placeholder="">
+								<span class="focus-input100"></span>
+								
+							</div>
+							
+							<div class="wrap-input100 validate-input" data-validate="Required">
+								<span class="label-input100">Submit your work(if any)</span>
+								<input class="input100" type="text" name="entry.1470925297" id="urlValue" placeholder="URL">
+								<span class="focus-input100"></span>
+								
+							</div> -->
+							
+							<div class="wrap-input100 validate-input" data-validate="Required">
+								<span class="label-input100">If you have 60 rupees in Thapar, what will you eat and why?</span>
+								<input class="input100" type="text" name="entry.1622578703" id="thaparFamousFood" placeholder="Special Food of Thapar">
+								<span class="focus-input100"></span>
+							</div> {% endcomment %}
+							{% comment %} <div style="display: flex;flex-direction:flex-start">
+							
+							<div class="container-contact100-form-btn">
+								<button class="contact100-form-btn nexty" type="submit">
+									<span>
+										Submit
+										<!-- <i class="fa fa-long-arrow-right m-l-7"  aria-hidden="true"></i> -->
+									</span>
+								</button>
+              </div>
+              <div class="container-contact100-form-btn">
+								<button type="button" class="contact100-form-btn backy" id="section_three_prev" onclick="previous_two()"> 
+									<span>
+										Back
+										<!-- <i class="fa fa-long-arrow-left m-l-7"  aria-hidden="true"></i> -->
+									</span>
+								</button>
+							</div> {% endcomment %}
+            {% comment %} </div>
+						</div> {% endcomment %}
+						
+						
+					</form>
+					
+					<!-- Reset CSS -->
+					
+					</div>
+					  
+				</div>
+			</div>
+		</div>
+		
+</div>
+
+
+
+	{% comment %} <div id="dropDownSelect1"></div> {% endcomment %}
+	<!-- <div class="successpop" id="successpop" style="visibility: visible; opacity: 1;">
+		<div class="successpop_content" >
+		  <!-- <div class="successpop_left">
+			<img src="{% static 'sass/img/qw.jpg" alt="hi" class="successpop_img" />
+			 <img src="img/about3.jpeg" alt="hi" class="successpop_img"
+		  </div> -->
+		  <!-- <div class="successpop_right">
+			 <a href="#" onclick="exit_form()" class="successpop_cross">&times;</a> 
+			<div class="popupimg">
+			<h1 class="heading-1 successpop_heading u-centre"><img id="logo_popup" src="{% static 'sass/img/logo2.jpg"></h1>
+			</div>
+			<p class="paragraph successpop_paragraph no_BT" style="column-count: unset; margin-bottom: 1.5rem; font-size: 2rem;" >
+				Thank you for all your incredible responses and overwhelming support. The further details of the recruitment process will be sent to you on your email id as well as WhatsApp as well as updated on social media handles of Thapar Food Festival. Till then stay tuned!
+				 
+				<!-- In the meantime, we would like to offer you a token of love for taking out your time.
+				<div style="display: flex; flex-direction: column; text-align: center;">
+				<a href="{% static 'sass/pdf/CraveLab.pdf" download="TFF_CraveLab" style="margin: -2rem;">The Crave Lab <i  class="fas fa-download" style="font-size: 1.7rem; color: #1C4AEC;"></i></a>
+				<a href="{% static 'sass/pdf/GazingOwl.pdf" download="TFF_GazingOwl"style="margin: -2rem;" >The Gazing Owl <i class="fas fa-download" style="font-size: 1.7rem; color: #1C4AEC;"></i></a>
+				</div> -->
+				<!-- Button Instagram -->
+				<!-- <p class="paragraph successpop_paragraph" id="thanksmsg" style="column-count: unset; margin-top: 10px;">
+				We hope you like your gift ! For further updates , don't forget to follow us on Instagram and Facebook .
+				
+				Good Luck !
+			</p> 
+				<div class="btn__container_pop">
+					<a onclick="newWindow1()" class="btn_pop">
+					<i  class="link_pop fab fa-instagram" style="background-color:white;"></i>
+					<span class="social">Instagram</span>
+					</a>
+					<a onclick="newWindow2()" class="btn-f_pop">
+					<i  class="link_pop fab fa-facebook" style="background-color: white;"></i>
+					<span class="social">Facebook</span>
+					</a>
+				</div>
+			</p>
+		  </div>
+		</div>
+	</div> -->
+	<script>
+		function exit_form(){
+			window.location.href = "/";
+		}
+	</script>
+	
+<!--===============================================================================================-->
+	<script src="{% static 'RecruitForm/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'RecruitForm/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'RecruitForm/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'RecruitForm/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'RecruitForm/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'RecruitForm/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'RecruitForm/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'RecruitForm/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+	<script src="{% static 'RecruitForm/js/map-custom.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'RecruitForm/js/main.js' %}"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js' %}"></script>
+<!--===============================================================================================-->
+	<!-- <script src="/js/recruit.js' %}"></script> -->
+
+<!-- Global site tag (gtag.js' %}) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+	<script>
+			window.onload = function() {
+    		if(!window.location.hash) {
+			window.location = window.location + '#loaded';
+			window.location.reload();
+    	}
+
+		}
+	</script>
+	<script>
+		function newWindow2(){
+			window.open("https://www.facebook.com/thaparfoodfestival/","_blank");
+		}
+		function newWindow1(){
+			window.open("https://instagram.com/thaparfoodfestival?igshid=f4917zov84zo","_blank");
+		}
+		
+	</script>
+	<!-- <script>
+		var bgvideo1 = document.getElementById("bgvideo1");
+		bgvideo1.muted = true;
+		bgvideo1.play();
+		
+		var bgvideo2 = document.getElementById("bgvideo2");
+		bgvideo2.muted = true;
+		bgvideo2.play();
+		
+		var bgvideo3 = document.getElementById("bgvideo3");
+		bgvideo3.muted = true;
+		bgvideo3.play();
+	</script> -->
+	<script>
+
+		function forward_one(){
+			document.getElementById("section_two").style.display = "block";
+			document.getElementById("section_one").style.display = "none";
+			
+			document.getElementById("section_two").style.visibility = "visible";
+			document.getElementById("section_one").style.visibility = "hidden";
+			
+			document.getElementById("bg-video2").style.visibility = "visible";
+			document.getElementById("bg-video2").style.display = "block";
+			document.getElementById("bg-video1").style.visibility = "hidden";
+			document.getElementById("bg-video1").style.display = "none";
+			
+		}
+		
+		function forward_two(){
+			document.getElementById("section_three").style.display = "block";
+			document.getElementById("section_one").style.display = "none";
+			document.getElementById("section_two").style.display = "none";
+			document.getElementById("section_three").style.visibility = "visible";
+			document.getElementById("section_one").style.visibility = "hidden";
+			document.getElementById("section_two").style.visibility = "hidden";
+			document.getElementById("bg-video3").style.visibility = "visible";
+			document.getElementById("bg-video3").style.display = "block";
+			document.getElementById("bg-video1").style.visibility = "hidden";
+			document.getElementById("bg-video1").style.display = "none";
+			document.getElementById("bg-video2").style.visibility = "hidden";
+			document.getElementById("bg-video2").style.display = "none";
+		}
+		function previous_two(){
+			document.getElementById("section_one").style.display = "block";
+			
+			document.getElementById("section_two").style.display = "none";
+			document.getElementById("section_one").style.visibility = "visible";
+			
+			document.getElementById("section_two").style.visibility = "hidden";
+			document.getElementById("bg-video1").style.visibility = "visible";
+			document.getElementById("bg-video1").style.display = "block";
+			
+			
+			document.getElementById("bg-video2").style.visibility = "hidden";
+			document.getElementById("bg-video2").style.display = "none";
+		}
+		function previous_three(){
+			document.getElementById("section_two").style.display = "block";
+			document.getElementById("section_three").style.display = "none";
+			document.getElementById("section_one").style.display = "none";
+			document.getElementById("section_two").style.visibility = "visible";
+			document.getElementById("section_one").style.visibility = "hidden";
+			document.getElementById("section_three").style.visibility = "hidden";
+			document.getElementById("bg-video2").style.visibility = "visible";
+			document.getElementById("bg-video2").style.display = "block";
+			document.getElementById("bg-video1").style.visibility = "hidden";
+			document.getElementById("bg-video1").style.display = "none";
+			document.getElementById("bg-video3").style.visibility = "hidden";
+			document.getElementById("bg-video3").style.display = "none";
+		}
+		
+	</script>
+	<script>
+		function postToGoogle() {
+						var name = $("#name").val();
+						var roll = $("#roll").val();
+						var branch = $("#branch").val();
+						var phone = $("#phone").val();
+						var place = $("#place").val();
+						var timeDevote = $("#timeDevote").val();
+						var otherSocities = $("#otherSocities").val();
+						var Hobbies = $("#Hobbies").val();
+						var des = $("#des").val();
+						var message = $("#message").val();
+						var email = $("input[name='entry.41547401']").val();
+						var rateQ1 = $("input[name='entry.1694120072']:checked").val();
+						var rateQ2 = $("input[name='entry.200074965']:checked").val();
+						var rateQ3 = $("input[name='entry.1343528650']:checked").val();
+						var rateQ4 = $("input[name='entry.280603844']:checked").val();
+						var rateQ5 = $("input[name='entry.1656877776']:checked").val();
+						var thaparFood = $("input[name='entry.1622578703']").val();
+						
+						//  if(name == ""){
+						//  	alert('Please fill Your Name');
+						//  	document.getElementById("name").focus();
+						//  	return false;
+						//  }
+						
+						//  if(roll == ""){
+						//  	alert('Please fill Your RollNo');
+						//  	document.getElementById("roll").focus();
+						//  	return false;
+						//  }
+						//  if(branch == ""){
+						//  	alert('Please fill Your Branch');
+						//  	document.getElementById("name").focus();
+						//  	return false;
+						//  }
+						//  if(phone == ""){
+						//  	alert('Please fill Your PhoneNo');
+						//  	document.getElementById("phone").focus();
+						//  	return false;
+						//  }
+						
+						//  if( phone.length > 10 || phone.length < 10){
+						//  	alert('Please fill PhoneNo (10 digits only)');
+						//  	document.getElementById("phone").focus();
+						//  	return false;
+						//  }
+						//  if(place == ""){
+						//  	alert('Please fill Your City');
+						//  	document.getElementById("place").focus();
+						//  	return false;
+						//  }
+						//  if(timeDevote == ""){
+						//  	alert('Please fill time you can devote');
+						//  	document.getElementById("timeDevote").focus();
+						//  	return false;
+						//  }
+						//  if(otherSocities == ""){
+						//  	alert('Please fill Your Socities');
+						//  	document.getElementById("otherSocities").focus();
+						//  	return false;
+						//  }
+						//  if(Hobbies == ""){
+						//  	alert('Please fill Your Hobbies');
+						//  	document.getElementById("Hobbies").focus();
+						//  	return false;
+						//  }
+						//  if(des == ""){
+						//  	alert('Describe Yourself in 3 word!');
+						//  	document.getElementById("des").focus();
+						//  	return false;
+						//  }
+						//  if(!email.endsWith("thapar.edu")){
+						// 	alert('Enter Thapar Email only');
+						//  	document.getElementById("email").focus();
+						//  	return false;	
+						//  }
+						//  if(message == ""){
+						//  	alert(" TFF'19 ke View toh batao! ");
+						//  	document.getElementById("message").focus();
+						// 	 return false;
+						//  }
+						//  if(rateQ1 == ""){
+						//  	alert('Please rate yourself');
+						//  	$("input[name='entry.1694120072']").focus();
+						//  	return false;
+						//  }
+						//  if(rateQ2 == ""){
+						//  	alert('Please rate yourself');
+						//  	$("input[name='entry.200074965']").focus();
+						//  	return false;
+						//  }
+						//  if(rateQ3 == ""){
+						//  	alert('Please rate yourself');
+					 	// $("input[name='entry.1343528650']").focus();
+						//  	return false;
+						//  }
+						//  if(rateQ4 == ""){
+						//  	alert('Please rate yourself');
+						//  	$("input[name='entry.280603844']").focus();
+						//  	return false;
+						//  }
+						//  if(rateQ5 == ""){
+						//  	alert('Please rate yourself');
+						//  	$("input[name='entry.1656877776']").focus();
+					 	// return false;
+						//  }
+						//  if(thaparFood == ""){
+						//  	alert('Kuch to milega hi 60 me, batate jao');
+						//  	document.getElementById("thaparfood").focus();
+						//  	return false;
+						//  }
+		
+		
+						
+			
+						$.ajax({
+							url: "https://docs.google.com/forms/d/e/1FAIpQLSd7g2G9nZJ5FM9jG0-fRZPXNc4Cflv7NjpjhP-CHcYl6HMbZg/formResponse?",
+							data: {"entry.49493946": name, "entry.1670025806": roll, "entry.600816742": branch,
+							"entry.1965159740": phone, "entry.1690533821": place, "entry.1025971147": timeDevote, "entry.1234333045": otherSocities,
+							"entry.1056349084": Hobbies, "entry.1814998359": des, "entry.2061973106": message, "entry.41547401": email,
+							"entry.1694120072": rateQ1, "entry.200074965": rateQ2, "entry.1343528650": rateQ3, "entry.280603844": rateQ4,
+							"entry.1656877776": rateQ5,  "entry.1622578703": thaparFood},
+							type: "POST",
+							dataType: "xml",
+							success: function(d)
+							{
+								console.log("success!");
+								window.location.href = "/";
+							},
+							error: function(x, y, z)
+								{	
+									document.querySelector(".successpop").style.opacity = 1;
+									document.querySelector(".successpop").style.visibility = "visible";
+									console.log("added successfully");
+								}
+						});
+						return false;
+					}
+		</script>
+</body>
+
+</html>

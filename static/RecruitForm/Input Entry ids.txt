@@ -1,0 +1,29 @@
+Name   49493946
+Gender 737531847
+RollNo 1670025806
+Branch 600816742
+PhoneNo 1965159740
+City    1690533821
+Time to Devote in TFF   1025971147
+Other Societies been a part of  1234333045
+Hobbies    1056349084
+Description in 3 Words  1814998359
+Views about TFF    2061973106
+Famous Food  1413529514
+Build \u0026 Lead a team  1694120072
+Stay positive under pressure   200074965
+Proactively reach out \u0026 help others   1343528650
+"Come up with active solutions"  280603844
+Get things done on time    1656877776
+"What value you can add to TFF?"   1470925297
+
+
+
+{"entry.49493946": name, "entry.737531847": gender, "entry.1670025806": roll, "entry.600816742": branch,
+"entry.1965159740": phone, "entry.1690533821": place, "entry.1025971147": timeDevote, "entry.1234333045": otherSocities,
+"entry.1056349084": Hobbies, "entry.1814998359": des, "entry.2061973106": message, "entry.1413529514": famous,
+"entry.1694120072": rateQ1, "entry.200074965": rateQ2, "entry.1343528650": rateQ3, "entry.280603844": rateQ4,
+"entry.1656877776": rateQ5, "entry.1470925297": value}
+
+
+
