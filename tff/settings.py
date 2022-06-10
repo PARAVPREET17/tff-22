@@ -25,11 +25,11 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('DJANGO_SECRET_KEY')
+SECRET_KEY = 'django-insecure-u#9dbu5(r#r)f!bfr1(v6p2bnzvn=kl(r#4t9w@g19%p7ms^@m'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DJANGO_DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = ['www.thaparfoodfestival.in','thaparfoodfestival.in','127.0.0.1']
 
@@ -83,8 +83,12 @@ WSGI_APPLICATION = 'tff.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': 'tff',
+        'USER': 'Philander',
+        'PASSWORD': 'Executiveboard22@',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
