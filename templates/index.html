@@ -94,9 +94,9 @@ $(".loader_wrapper").fadeOut("slow");
       <h3 class="nav_tff">Thapar Food Festival</h3>
       <div class="navigation_link navigation_item">
         <a href="#popup" onclick="closeNav()">About</a>
-        <a href="events.html" onclick="closeNav()">Events</a>
-        <a href="#section_pic" onclick="closeNav()">Sponsors</a>
-        <a href="#popup4" onclick="closeNav()">Theme</a>
+        {% comment %} <a href="events.html" onclick="closeNav()">Events</a> {% endcomment %}
+        <a href="#section_pic" onclick="closeNav()"> Past Sponsors</a>
+        <a href="{% url 'recruit' %}" onclick="closeNav()">Recruitment Registration</a>
         <a href="#team_section" onclick="closeNav()">Gallery</a>
       </div>
       <h3 class="follow_us">Follow Us On</h3>
