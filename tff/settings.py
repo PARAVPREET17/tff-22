@@ -30,7 +30,7 @@ SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DJANGO_DEBUG')
+DEBUG =env('DJANGO_DEBUG')
 
 ALLOWED_HOSTS = ['www.thaparfoodfestival.in','thaparfoodfestival.in','127.0.0.1','52.139.171.235']
 
