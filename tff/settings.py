@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'tff.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'tff',
+        'NAME': 'tff',
         'USER': 'Philander',
-        'PASSWORD': 'Executiveboard22@',
+        'PASSWORD': "'Executiveboard22@'",
         'HOST': 'localhost',
         'PORT': '',
     }
