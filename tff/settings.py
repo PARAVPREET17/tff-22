@@ -26,11 +26,11 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-u#9dbu5(r#r)f!bfr1(v6p2bnzvn=kl(r#4t9w@g19%p7ms^@m'
-SECRET_KEY = env('DJANGO_SECRET_KEY')
-
+# SECRET_KEY = env('DJANGO_SECRET_KEY')
+SECRET_KEY = 1
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =env('DJANGO_DEBUG')
+DEBUG =True
 
 ALLOWED_HOSTS = ['www.thaparfoodfestival.in','thaparfoodfestival.in','127.0.0.1','52.139.171.235']
 

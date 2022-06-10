@@ -132,11 +132,7 @@ $(".loader_wrapper").fadeOut("slow");
        {% comment %} <div class="header_logo-box">
         <img src="img/white_logo.png' %}" alt="logo" class="footer_logo">
       </div> {% endcomment %}
-      <span class="discover_events"
-        ><a href="{% url 'recruit' %}" class="link" id="link"
-          >Be a part of the journey</a
-        ></span
-      > 
+     
 
       <!-- <div class="heading">
                 <h1 class="main-heading">
@@ -155,6 +151,11 @@ $(".loader_wrapper").fadeOut("slow");
             alt=""
           />
         </div>
+        <div style="text-align: center; position: absolute;" class="discover_events"
+        ><a href="{% url 'recruit' %}" class="link" id="link"
+          >Be a part of the journey</a
+        ></div
+      > 
       </div>
     </header>
     <main>
@@ -257,6 +258,7 @@ $(".loader_wrapper").fadeOut("slow");
             />
           </div>
         </div>
+        <span id="dots"></span><span id="more">
         <div class="row">
           <!-- </marquee>
 
@@ -290,7 +292,7 @@ $(".loader_wrapper").fadeOut("slow");
             />
           </div>
         </div>
-        <span id="dots"></span><span id="more">
+    
         <div class="row">
           <!-- </marquee>
 
@@ -445,9 +447,10 @@ $(".loader_wrapper").fadeOut("slow");
               src="{% static './sass/img/sponsors/veeba.jpeg' %}"
               alt=""
             />
-          </div>
-          <button onclick="myFunction()" id="myBtn">Read more</button>
+          </div>   
         </div>
+        </span>
+        <button onclick="show()" class="btn-link" id="myBtn">Read more</button>
 
         <!-- </marquee> -->
       </section>
@@ -646,7 +649,7 @@ $(".loader_wrapper").fadeOut("slow");
             >
               Technical Team TFF
             </a>
-          </span>
+       
         </div>
       </div>
     </footer>
@@ -885,7 +888,7 @@ $(".loader_wrapper").fadeOut("slow");
                             </div>
                         </div> -->
     <script>
-      function myFunction() {
+      function show() {
         var dots = document.getElementById("dots");
         var moreText = document.getElementById("more");
         var btnText = document.getElementById("myBtn");

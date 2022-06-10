@@ -554,7 +554,7 @@ iframe {
 }
 
 .contact100-form-title-2 {
-  font-family:'Dancing Script', cursive; ;
+  font-family: "Dancing Script", cursive;
   font-size: 30px;
   letter-spacing: 0.3rem;
   color: #fff;
@@ -10911,11 +10911,11 @@ body {
     width: 100%;
     margin-right: 2rem;
   }
-  .ho{
+  .ho {
     font: normal 133 4.75vw/1.5 Kanit, sans-serif !important;
     margin: 3px;
-}
   }
+}
 
 .col-1-of-3:not(:last-child) {
   margin-right: 6rem;
@@ -10930,10 +10930,10 @@ body {
     margin-right: 0;
     margin-bottom: 6rem;
   }
-  .ho{
+  .ho {
     font: normal 133 4.75vw/1.5 Kanit, sans-serif !important;
     margin: 3px;
-}
+  }
 }
 
 .campaign {
@@ -13186,6 +13186,7 @@ body {
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
 .sponsor-img {
   width: 240px;
   height: 120px;
@@ -13442,19 +13443,19 @@ body {
   .square-box-1 {
     padding: 25rem 10rem 29rem 10rem;
   }
-  .ho{
+  .ho {
     font: normal 133 4.75vw/1.5 Kanit, sans-serif !important;
     margin: 3px !important;
-}
+  }
 }
 @media (max-width: 56.25em) {
   .square-box-1 {
     padding: 9rem 6rem 27rem 6rem;
   }
-  .ho{
+  .ho {
     font: normal 133 4.75vw/1.5 Kanit, sans-serif !important;
     margin: 3px !important;
-}
+  }
 }
 
 .centre {
@@ -13479,19 +13480,19 @@ body {
   .square-box-2 {
     padding: 25rem 10rem 29rem 10rem;
   }
-  .ho{
+  .ho {
     font: normal 133 4.75vw/1.5 Kanit, sans-serif !important;
     margin: 3px !important;
-}
+  }
 }
 @media (max-width: 56.25em) {
   .square-box-2 {
     padding: 9rem 6rem 27rem 6rem;
   }
-  .ho{
+  .ho {
     font: normal 133 4.75vw/1.5 Kanit, sans-serif !important;
     margin: 3px !important;
-}
+  }
 }
 .square-box-2:hover {
   box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.733);
@@ -13984,12 +13985,6 @@ body {
   }
 }
 
-.discover_events {
-  position: absolute;
-  top: 82%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-}
 @media (max-width: 37.5em) {
   .discover_events {
     position: absolute;
@@ -14143,12 +14138,26 @@ body {
     width: 40%;
     margin-top: 12%;
   }
+  .discover_events {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 80%;
+  }
 }
 @media (max-width: 550px) {
   .header_logo {
     z-index: 1;
     width: 80%;
     margin-top: 60%;
+  }
+  .discover_events {
+    left: 50%;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 70%;
   }
 }
 /************ Gallery**********/
