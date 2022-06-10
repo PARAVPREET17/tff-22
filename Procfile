@@ -1,1 +1,1 @@
-web:gunicorn tff.wsgi
+web: gunicorn tff.wsgi
