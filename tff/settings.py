@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-u#9dbu5(r#r)f!bfr1(v6p2bnzvn=kl(r#4t9w@g19%p7ms^@m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.thaparfoodfestival.in','thaparfoodfestival.in','127.0.0.1']
+ALLOWED_HOSTS = ['www.thaparfoodfestival.in','thaparfoodfestival.in','127.0.0.1','52.139.171.235']
 
 
 # Application definition
