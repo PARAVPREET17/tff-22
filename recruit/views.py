@@ -84,3 +84,15 @@ def export_answers_xls(request):
         return response
     else:
         return redirect('home')    
+
+
+def ardour(request):
+    if request.method=="POST":
+        form=RecruitmentForm(request.POST or None)
+        if form.is_valid():
+            user=form.save()
+            name=form.cleaned_data['name']
+            email=form.cleaned_data['email']
+            user.save()
+            redirect('ardour')
+    return render(request,'ardour/ardour.html')  

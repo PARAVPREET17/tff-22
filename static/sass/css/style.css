@@ -792,6 +792,7 @@ textarea.input100 {
   #logo_popup {
     width: 70%;
   }
+  
 }
 
 @media (max-width: 600px) {
@@ -13215,7 +13216,7 @@ body {
 @media (max-width: 56.25em) {
   .section_pic {
     background-size: 100% 100%;
-    padding: 5rem 4rem;
+    padding: 5rem 2rem;
     margin: 3rem;
   }
 }
@@ -13906,7 +13907,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .section-about {
-    padding: 5rem 1rem 5rem 1rem;
+    padding: 5rem 2rem 5rem 2rem;
     margin: 3rem;
   }
 }
@@ -14137,6 +14138,9 @@ body {
     z-index: 1;
     width: 40%;
     margin-top: 12%;
+  }
+  .mobile_phone{
+    padding-left:5rem;
   }
   .discover_events {
     left: 0;
