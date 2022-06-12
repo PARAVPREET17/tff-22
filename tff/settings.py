@@ -30,7 +30,7 @@ SECRET_KEY= 'r4trhegrgFDWEFtgf3$RTF34r'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['www.thaparfoodfestival.in','thaparfoodfestival.in','127.0.0.1','52.139.171.235']
 
