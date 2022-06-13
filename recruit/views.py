@@ -13,11 +13,15 @@ def recruit(request):
     if request.method=="POST":
         form=RecruitmentForm(request.POST or None)
         if form.is_valid():
-            user=form.save()
-            name=form.cleaned_data['name']
-            email=form.cleaned_data['email']
-            user.save()
-            send_mail(
+            user=form.save(commit=False)
+            name=form.cleaned_data.get('name')
+            email=form.cleaned_data.get('email')
+            if RecruitmentModel.objects.filter(email=email).exists():
+                  messages.error(request,f'User is already registered with this email')
+                  return redirect('recruit')
+            else:    
+              user.save()
+              send_mail(
                     'Thapar Food Festival Registration Confirmation',
                     f"""
 
@@ -33,8 +37,8 @@ Team Thapar Food Festival'22
                     'thaparfoodfestival22@gmail.com',
                     [email],
                 )
-            messages.success(request,f"Hello {name} You are successfully registered for Recruitment of TFF'22")
-            redirect('recruit')
+              messages.success(request,f"Hello {name} You are successfully registered for Recruitment of TFF'22")
+              redirect('recruit')
     return render(request,'recruit/recruit.html')        
 
 def tff16(request):
@@ -86,13 +90,13 @@ def export_answers_xls(request):
         return redirect('home')    
 
 
-def ardour(request):
-    if request.method=="POST":
-        form=RecruitmentForm(request.POST or None)
-        if form.is_valid():
-            user=form.save()
-            name=form.cleaned_data['name']
-            email=form.cleaned_data['email']
-            user.save()
-            redirect('ardour')
-    return render(request,'ardour/ardour.html')  
+# def ardour(request):
+#     if request.method=="POST":
+#         form=RecruitmentForm(request.POST or None)
+#         if form.is_valid():
+#             user=form.save()
+#             name=form.cleaned_data['name']
+#             email=form.cleaned_data['email']
+#             user.save()
+#             redirect('ardour')
+#     return render(request,'ardour/ardour.html')  
