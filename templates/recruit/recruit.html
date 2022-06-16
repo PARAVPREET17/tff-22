@@ -77,32 +77,8 @@ $(".loader_wrapper").fadeOut("slow");
 <div class="bg-contact100">
 	
 	<div  class="bg-video" id="bg-video1">
-		<video class="bg-video_content-2 videos" autoplay loop muted > 
-		  <source
-			src="{% static 'sass/img/forms1.mp4"
-			type="video/mp4"
-		  />
-		</video>
-	  </div>	
-	  
-	  
-	<div  class="bg-video" id="bg-video2">
-		<video class="bg-video_content-2 videos" autoplay loop muted>
-		  <source
-			src="{% static 'sass/img/2.mp4"
-			type="video/mp4"
-		  />
-		</video>
-	  </div>	
-	  
-	<div  class="bg-video" id="bg-video3">
-		<video class="bg-video_content-2 videos" autoplay loop muted>
-		  <source
-			src="{% static 'sass/img/1.mp4"
-			type="video/mp4"
-		  />
-		</video>
-	  </div>	
+		<div class="bg-video_content-2 "  > 
+		
 		<div class="container-contact100">
 			<div class="wrap-contact100">
 		<!-- <div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div> -->
@@ -591,7 +567,7 @@ $(".loader_wrapper").fadeOut("slow");
 				</div>
 			</div>
 		</div>
-		
+		</div>
 </div>
 
 
@@ -716,10 +692,10 @@ $(".loader_wrapper").fadeOut("slow");
 			document.getElementById("section_two").style.visibility = "visible";
 			document.getElementById("section_one").style.visibility = "hidden";
 			
-			document.getElementById("bg-video2").style.visibility = "visible";
+			/*.getElementById("bg-video2").style.visibility = "visible";
 			document.getElementById("bg-video2").style.display = "block";
 			document.getElementById("bg-video1").style.visibility = "hidden";
-			document.getElementById("bg-video1").style.display = "none";
+			document.getElementById("bg-video1").style.display = "none"; */
 			
 		}
 		
@@ -730,12 +706,12 @@ $(".loader_wrapper").fadeOut("slow");
 			document.getElementById("section_three").style.visibility = "visible";
 			document.getElementById("section_one").style.visibility = "hidden";
 			document.getElementById("section_two").style.visibility = "hidden";
-			document.getElementById("bg-video3").style.visibility = "visible";
+		/*	document.getElementById("bg-video3").style.visibility = "visible";
 			document.getElementById("bg-video3").style.display = "block";
 			document.getElementById("bg-video1").style.visibility = "hidden";
 			document.getElementById("bg-video1").style.display = "none";
 			document.getElementById("bg-video2").style.visibility = "hidden";
-			document.getElementById("bg-video2").style.display = "none";
+			document.getElementById("bg-video2").style.display = "none";*/
 		}
 		function previous_two(){
 			document.getElementById("section_one").style.display = "block";
@@ -744,12 +720,7 @@ $(".loader_wrapper").fadeOut("slow");
 			document.getElementById("section_one").style.visibility = "visible";
 			
 			document.getElementById("section_two").style.visibility = "hidden";
-			document.getElementById("bg-video1").style.visibility = "visible";
-			document.getElementById("bg-video1").style.display = "block";
 			
-			
-			document.getElementById("bg-video2").style.visibility = "hidden";
-			document.getElementById("bg-video2").style.display = "none";
 		}
 		function previous_three(){
 			document.getElementById("section_two").style.display = "block";
@@ -758,12 +729,7 @@ $(".loader_wrapper").fadeOut("slow");
 			document.getElementById("section_two").style.visibility = "visible";
 			document.getElementById("section_one").style.visibility = "hidden";
 			document.getElementById("section_three").style.visibility = "hidden";
-			document.getElementById("bg-video2").style.visibility = "visible";
-			document.getElementById("bg-video2").style.display = "block";
-			document.getElementById("bg-video1").style.visibility = "hidden";
-			document.getElementById("bg-video1").style.display = "none";
-			document.getElementById("bg-video3").style.visibility = "hidden";
-			document.getElementById("bg-video3").style.display = "none";
+		
 		}
 		
 	</script>
