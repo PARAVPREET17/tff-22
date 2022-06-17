@@ -771,14 +771,14 @@ textarea.input100 {
 #logo_popup {
   width: 60%;
   margin-top: -9rem;
-  margin-bottom: -10rem;
+  margin-bottom: 3rem;
 }
 
 /*------------------------------------------------------------------
 [ Responsive ]*/
 @media (min-width: 900px) {
   #logo_popup {
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -833,7 +833,7 @@ textarea.input100 {
   }
   #logo_popup {
     width: 80%;
-    margin-bottom: -8rem;
+    margin-bottom: -3rem;
   }
 }
 

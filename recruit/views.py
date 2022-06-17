@@ -37,8 +37,8 @@ Team Thapar Food Festival'22
                     'thaparfoodfestival22@gmail.com',
                     [email],
                 )
-              messages.success(request,f"Hello {name} You are successfully registered for Recruitment of TFF'22")
-              redirect('recruit')
+             
+              return render(request,'thankyou.html')
     return render(request,'recruit/recruit.html')        
 
 def tff16(request):
@@ -100,3 +100,6 @@ def export_answers_xls(request):
 #             user.save()
 #             redirect('ardour')
 #     return render(request,'ardour/ardour.html')  
+
+# def thankyou(request):
+#     return render(request,'thankyou.html')
