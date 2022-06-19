@@ -657,7 +657,7 @@ $(".loader_wrapper").fadeOut("slow");
 
 	  gtag('config', 'UA-23581568-13');
 	</script>
-	<script>
+	{% comment %} <script>
 			window.onload = function() {
     		if(!window.location.hash) {
 			window.location = window.location + '#loaded';
@@ -665,7 +665,7 @@ $(".loader_wrapper").fadeOut("slow");
     	}
 
 		}
-	</script>
+	</script> {% endcomment %}
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 	<script>
 		function newWindow2(){
