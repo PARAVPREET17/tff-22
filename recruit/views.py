@@ -38,7 +38,7 @@ Team Thapar Food Festival'22
                     [email],
                 )
              
-              return render(request,'thankyou.html')
+              redirect('thankyou')
     return render(request,'recruit/recruit.html')        
 
 def tff16(request):
@@ -101,5 +101,5 @@ def export_answers_xls(request):
 #             redirect('ardour')
 #     return render(request,'ardour/ardour.html')  
 
-# def thankyou(request):
-#     return render(request,'thankyou.html')
+def thankyou(request):
+    return render(request,'thankyou.html')
