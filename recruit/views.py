@@ -10,36 +10,36 @@ def home(request):
     return render(request,'index.html')
 
 def recruit(request):
-    if request.method=="POST":
-        form=RecruitmentForm(request.POST or None)
-        if form.is_valid():
-            user=form.save(commit=False)
-            name=form.cleaned_data.get('name')
-            email=form.cleaned_data.get('email')
-            if RecruitmentModel.objects.filter(email=email).exists():
-                  messages.error(request,f'User is already registered with this email')
-                  return redirect('recruit')
-            else:    
-              user.save()
-              send_mail(
-                    'Thapar Food Festival Registration Confirmation',
-                    f"""
+#     if request.method=="POST":
+#         form=RecruitmentForm(request.POST or None)
+#         if form.is_valid():
+#             user=form.save(commit=False)
+#             name=form.cleaned_data.get('name')
+#             email=form.cleaned_data.get('email')
+#             if RecruitmentModel.objects.filter(email=email).exists():
+#                   messages.error(request,f'User is already registered with this email')
+#                   return redirect('recruit')
+#             else:    
+#               user.save()
+#               send_mail(
+#                     'Thapar Food Festival Registration Confirmation',
+#                     f"""
 
-Greetings {user.name}, soon-to-be sophomore (hopefully),
+# Greetings {user.name}, soon-to-be sophomore (hopefully),
 
-This is to inform you that you have taken the first step towards becoming a member of the core team for this 'Food Gala', Thapar Food Festival, 2k22.
+# This is to inform you that you have taken the first step towards becoming a member of the core team for this 'Food Gala', Thapar Food Festival, 2k22.
 
-All the best for the upcoming rounds. 
+# All the best for the upcoming rounds. 
 
-Regards,
-Team Thapar Food Festival'22
-                        """,
-                    'thaparfoodfestival22@gmail.com',
-                    [email],
-                )
+# Regards,
+# Team Thapar Food Festival'22
+#                         """,
+#                     'thaparfoodfestival22@gmail.com',
+#                     [email],
+#                 )
              
-              redirect('thankyou')
-    return render(request,'recruit/recruit.html')        
+#               redirect('thankyou')
+    return render(request,'thankyou.html')        
 
 def tff16(request):
     return render(request,'2016.html')

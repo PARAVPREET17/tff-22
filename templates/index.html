@@ -96,7 +96,7 @@ $(".loader_wrapper").fadeOut("slow");
         <a href="#popup" onclick="closeNav()">About</a>
         {% comment %} <a href="events.html" onclick="closeNav()">Events</a> {% endcomment %}
         <a href="#section_pic" onclick="closeNav()"> Past Sponsors</a>
-        <a href="{% url 'recruit' %}" onclick="closeNav()">Recruitment Registration</a>
+        {% comment %} <a href="{% url 'recruit' %}" onclick="closeNav()">Recruitment Registration</a> {% endcomment %}
         <a href="#team_section" onclick="closeNav()">Gallery</a>
       </div>
       {% comment %} <h3 class="follow_us">Follow Us On</h3>
@@ -151,12 +151,12 @@ $(".loader_wrapper").fadeOut("slow");
             alt=""
           />
         </div>
-        <div style="text-align: center; position: absolute;" class="discover_events"
+        {% comment %} <div style="text-align: center; position: absolute;" class="discover_events"
         ><a href="{% url 'recruit' %}" class="link" id="link"
           >Be a part of the journey</a
         ></div
       > 
-      </div>
+      </div> {% endcomment %}
     </header>
     <main>
       <section class="section-about" id="section-about">
