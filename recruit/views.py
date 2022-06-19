@@ -9,7 +9,7 @@ from django.contrib import messages
 def home(request):
     return render(request,'index.html')
 
-def recruit(request):
+# def recruit(request):
 #     if request.method=="POST":
 #         form=RecruitmentForm(request.POST or None)
 #         if form.is_valid():
@@ -39,7 +39,7 @@ def recruit(request):
 #                 )
              
 #               redirect('thankyou')
-    return render(request,'thankyou.html')        
+    # return render(request,'thankyou.html')        
 
 def tff16(request):
     return render(request,'2016.html')
